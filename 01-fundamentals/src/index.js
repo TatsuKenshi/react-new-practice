@@ -13,25 +13,15 @@ const Booklist = () => {
 };
 
 const Book = () => {
+  const title = "Interesting Facts For Curious Minds";
+  const author = "Jordan Moore";
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src="./images/book-1.jpg" alt="book cover" />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   );
-};
-
-const Image = () => {
-  return <img src="./images/book-1.jpg" alt="book cover" />;
-};
-
-const Title = () => {
-  return <h2>Interesting Facts For Curious Minds</h2>;
-};
-
-const Author = () => {
-  return <p>Jordan Moore</p>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
