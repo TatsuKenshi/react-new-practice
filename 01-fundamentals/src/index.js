@@ -1,24 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import { books } from "./books";
-import Book from "./Book";
 
-const Booklist = () => {
+function Greeting() {
   return (
     <>
-      <section>
-        <h1>Amazon Bestsellers</h1>
-      </section>
-      <section className="booklist">
-        {books.map((book, index) => {
-          return <Book {...book} key={book.id} number={index} />;
-        })}
-      </section>
+      <div>
+        <Person />
+        <Message />
+      </div>
     </>
   );
+}
+
+const Person = () => <h2 className="classOne">My first React component.</h2>;
+
+const Message = () => {
+  return <p>this is a paragraph</p>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<Booklist />);
+root.render(<Greeting />);
