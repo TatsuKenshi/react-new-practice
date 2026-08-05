@@ -1,22 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
-function Greeting() {
+const BookList = () => {
   return (
-    <>
-      <div>
-        <Person />
-        <Message />
-      </div>
-    </>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
-}
+};
 
-const Person = () => <h2 className="classOne">My first React component.</h2>;
+const author = "Lyla Jadeborn";
 
-const Message = () => {
-  return <p>this is a paragraph</p>;
+const Book = () => {
+  const title = "The Secret Bookshop";
+  return (
+    <article className="book">
+      <img src="./images/book-1.jpg" alt="Book Cover" height="250px" />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+    </article>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Greeting />);
+root.render(<BookList />);
