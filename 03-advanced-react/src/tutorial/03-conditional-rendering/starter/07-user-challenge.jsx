@@ -3,11 +3,11 @@ import { useState } from "react";
 const UserChallenge = () => {
   const [user, setUser] = useState(null);
 
-  const userLogin = () => {
+  const userLoginFunction = () => {
     setUser({ name: "Mike" });
   };
 
-  const userLogout = () => {
+  const userLogoutFunction = () => {
     setUser(null);
   };
 
@@ -16,12 +16,12 @@ const UserChallenge = () => {
       {!user ? (
         <div>
           <h4>Please Log in</h4>
-          <button onClick={userLogin}>Log in</button>
+          <button onClick={userLoginFunction}>Log in</button>
         </div>
       ) : (
         <div>
           <h4>Welcome {user.name}</h4>
-          <button onClick={userLogout}>Log out</button>
+          <button onClick={userLogoutFunction}>Log out</button>
         </div>
       )}
     </main>
