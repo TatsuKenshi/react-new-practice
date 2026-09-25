@@ -1,11 +1,9 @@
-import Starter from "./tutorial/03-conditional-rendering/starter/04-short-circuit-overview";
-// import Example from "./tutorial/04-project-structure/starter/Example";
+import Starter from "./tutorial/05-leverage-javascript/starter/List";
 
 function App() {
   return (
     <div className="container">
       <Starter />
-      {/* <Example /> */}
     </div>
   );
 }
