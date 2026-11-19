@@ -1,10 +1,12 @@
-import Starter from "./tutorial/07-useRef/starter/01-useRef-basics";
+import Starter from "./tutorial/09-context-api/starter/Navbar";
 
 function App() {
   return (
-    <div className="container">
+    // <div className="container">
+    <div>
       <Starter />
     </div>
+    // </div>
   );
 }
 
